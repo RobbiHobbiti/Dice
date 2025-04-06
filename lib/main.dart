@@ -1,15 +1,15 @@
+import 'dart:math';
+import 'package:dice/dice_roller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
 void main(){
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
-void dice(){
-
-}
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ void dice(){
           actions: [Icon(Icons.arrow_back_ios)],
         ),
         body: Center(
-          child: ElevatedButton(onPressed: dice, child: Image.asset("assets/dice-images/dice-1.png")),
+          child: DiceRoller(),
         ),
       ),
     );
